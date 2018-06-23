@@ -1,4 +1,4 @@
-h1, ul {
+h1, h2, ul {
     margin: 0;
     padding: 0;
 }
@@ -16,16 +16,21 @@ nav {
     height: 112px;
 }
 
+nav >.container {
+    padding-top: 16px;
+}
+
 .navbar-brand {
-    padding: 16px 16px 0 0;
+    padding: 0;
 }
 
 .navbar-header h2 {
     padding-left: 48px;
+    margin-top: 22px;
 }
 
 ul.navbar-right {
-    padding-top: 31px;
+    padding-top: 22px;
 }
 
 ul.navbar-right > li {
@@ -37,13 +42,26 @@ ul.navbar-right > li {
     height: 32px;
     font-weight: 600;
 }
-
+/*
 .caret {
     border-width: 10px 10px 0 10px;
 }
+*/
 
 .nav >li > a{
     padding-left: 0;
+}
+
+.navbar-header > button{
+    width: 48px;
+    height: 48px;
+}
+
+.navbar-toggle {
+    display: block;
+    position: fixed;
+    top: 22px;
+    right: 16px;
 }
 
 .header-padding {
@@ -70,14 +88,60 @@ footer > div {
 
 .web-icons > li {
     float: left;
-    width: 135px;
-    padding: 0 43px;
+    width: 20%;
+    text-align: center;
 }
 
 .web-icons > li > a > img {
     width: 48px;
     height: 48px;
+    margin-bottom: 28px;
 }
 
+.col-xs-12 {
+    padding: 0 !important;
+}
+/* 利用後面覆蓋的特性去初始化, 避免繁複冗長的呈述 */
+.show-S, .show-M, .show-L {
+    display: none;
+}
+.clear-S, .clear-M, .clear-L {
+    display: block;
+}
 
+@media (min-width: 1280px) {
+    .show-L {
+        display: block;
+    }
+    .clear-L {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and  (max-width: 1279px){
+    .show-M {
+        display: block;
+    }
+    .clear-M {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    footer {
+        height: 220px;
+    }
+    footer > div, .web-icons {
+        width: 100%;
+    }
+    .web-icons > li {
+        width: 33.333333333%;
+    }
+    .show-S {
+        display: block;
+    }
+    .clear-S {
+        display: none;
+    }
+}
 /*================== end footer ==================*/

@@ -9,16 +9,35 @@ main > div.container {
 }
 
 .card {
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    position: relative;
+    cursor:pointer;
+}
+
+.card-box {
     width: 86.363636363636363636363636363636%;
-    height: 580px;
-    
     padding: 48px;
+    text-align: center;
     background: black;
 }
 
-.card-body {
-    height: 100%;
-    background: pink;
+.card:hover {
+    transform: rotateY( 180deg );
+}
+
+.card-font {
+    width: 100%;
+    backface-visibility: hidden;
+}
+
+.card-back {
+    width: 100%;
+    transform: rotateY( 180deg );
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 .slogan > div {
@@ -26,4 +45,18 @@ main > div.container {
     height: 180px;
     padding: 60px 0;
     margin-bottom: 150px;
+}
+
+@media (max-width: 767px) {
+    .slogan> div {
+        height: 200px;
+    }
+    
+    h1 {
+        font-size: 40px;
+    }
+    
+    .card-box {
+        width: 100%;
+    }
 }

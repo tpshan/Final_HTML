@@ -14,16 +14,11 @@
     <nav class="navbar navbar-default navbar-fixed-top" id="top-nav">
         <div class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>   <!-- 漢堡選單 L-Size 收合, 小於 L-Size 顯示 -->
-                <a class="navbar-brand" href="./index.html"><img src="./img/logo.png" alt=""></a>
+                <a class="navbar-brand show-L" href="./index.html"><img src="./img/logo.png" alt=""></a>
                 <a class="navbar-brand" href="./index.html"><h2>北科學餐Talk版</h2></a>
             </div>  <!-- nav 固定區 = 必顯示區域 -->
             <div class="navbar-collapse collapse navbar-responsive-collapse">
-                <ul class="nav navbar-nav navbar-right">
+                <ul class="nav navbar-nav navbar-right show-L">
                     <li><button type="button" class="btn btn-default navbar-btn">登 入</button></li>
                     <li><button type="button" class="btn btn-default navbar-btn">註 冊</button></li>
                     <!--
@@ -37,20 +32,33 @@
                     -->                
                 </ul>   <!-- 固定於 nav 右側 -->
             </div>
+            <div class="navbar-header clear-L">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>   <!-- 漢堡選單 L-Size 收合, 小於 L-Size 顯示 -->
+            </div>
         </div>
     </nav>
     <div class="header-padding"></div>  <!-- 非套版, 要自己寫 -->
     <main>
         <div class="container">
             <div class="row">
-                <div class="col-md-6 col-xs-12">
-                    <div class="card pull-left">
-                        <div class="card-body"></div>
+                <div class="col-sm-6 col-xs-12">
+                    <div class="card-box pull-left">
+                        <div class="card" id="sixthB4">
+                            <img src="./img/card-font.png" class="card-font" alt="">
+                            <img src="./img/card-back.png" class="card-back" alt="">
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-xs-12">
-                    <div class="card pull-right">
-                        <div class="card-body"></div>
+                <div class="col-sm-6 col-xs-12">
+                    <div class="card-box pull-right">
+                        <div class="card" id="dormitory">
+                            <img src="./img/card-font.png" class="card-font" alt="">
+                            <img src="./img/card-back.png" class="card-back" alt="">
+                        </div>
                     </div>
                 </div>
             </div>  <!-- row -->
@@ -58,7 +66,8 @@
     </main>
     <article class="slogan">
         <div class="container">
-            <h1 class="text-center">和大家分享你呷飯的所在</h1>
+            <h1 class="text-center clear-S">和大家分享你呷飯的所在</h1>
+            <h1 class="text-center show-S">和大家分享<br>你呷飯的所在</h1>
         </div>
     </article>
     <footer>
@@ -69,6 +78,7 @@
                 <li><a href=""><img src="./img/icon-twitter.png" alt="twitter"></a></li>
                 <li><a href=""><img src="./img/icon-ig.png" alt="ig"></a></li>
                 <li><a href=""><img src="./img/icon-facebook.png" alt="facebook"></a></li>
+                <li class="show-S"><a href=""><img src="./img/icon-pinterest.png" alt="pinterest"></a></li>
             </ul>
         </div>
     </footer>
