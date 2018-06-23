@@ -1,0 +1,83 @@
+h1, ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6, p, a {
+    font-family: '微軟正黑體';
+}
+
+/*================== nav ==================*/
+nav {
+    height: 112px;
+}
+
+.navbar-brand {
+    padding: 16px 16px 0 0;
+}
+
+.navbar-header h2 {
+    padding-left: 48px;
+}
+
+ul.navbar-right {
+    padding-top: 31px;
+}
+
+ul.navbar-right > li {
+    margin-left: 64px;
+}
+
+.navbar-btn {
+    width: 64px;
+    height: 32px;
+    font-weight: 600;
+}
+
+.caret {
+    border-width: 10px 10px 0 10px;
+}
+
+.nav >li > a{
+    padding-left: 0;
+}
+
+.header-padding {
+    height: 112px;
+}
+
+/*================== end nav ==================*/
+/*================== footer ==================*/
+footer {
+    background: gray;
+    height: 145px;
+    padding: 48px 0;
+}
+
+footer > div {
+    width: 675px;
+    margin: 0 auto;
+}
+
+.web-icons {
+    width: 675px;
+    height: 48px;
+}
+
+.web-icons > li {
+    float: left;
+    width: 135px;
+    padding: 0 43px;
+}
+
+.web-icons > li > a > img {
+    width: 48px;
+    height: 48px;
+}
+
+
+/*================== end footer ==================*/

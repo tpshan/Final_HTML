@@ -1,0 +1,29 @@
+h1 {
+    font-size: 60px;
+}
+
+main > div.container {
+    padding: 0;
+    margin-top: 60px;
+    margin-bottom: 120px;
+}
+
+.card {
+    width: 86.363636363636363636363636363636%;
+    height: 580px;
+    
+    padding: 48px;
+    background: black;
+}
+
+.card-body {
+    height: 100%;
+    background: pink;
+}
+
+.slogan > div {
+    background: gray;
+    height: 180px;
+    padding: 60px 0;
+    margin-bottom: 150px;
+}
