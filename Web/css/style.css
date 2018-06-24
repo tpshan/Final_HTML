@@ -24,6 +24,11 @@ nav >.container {
     padding: 0;
 }
 
+.navbar-brand > img {
+    width: 142px;
+    height: 80px;
+}
+
 .navbar-header h2 {
     padding-left: 48px;
     margin-top: 22px;
@@ -42,11 +47,6 @@ ul.navbar-right > li {
     height: 32px;
     font-weight: 600;
 }
-/*
-.caret {
-    border-width: 10px 10px 0 10px;
-}
-*/
 
 .nav >li > a{
     padding-left: 0;
@@ -125,9 +125,17 @@ footer > div {
     .clear-M {
         display: none;
     }
+    .navbar-collapse {
+        position: fixed;
+        top: 111px;
+    }
 }
 
 @media (max-width: 767px) {
+    .navbar-collapse {
+        position: fixed;
+        top: 111px;
+    }
     footer {
         height: 220px;
     }
