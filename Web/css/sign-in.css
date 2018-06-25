@@ -1,0 +1,38 @@
+.main {
+    background: silver;
+    width: 603px;
+    height: 605px;
+    margin: 60px auto;
+    margin-bottom: 150px;
+    text-align: center;
+}
+
+.main > h1 {
+    font-size: 60px;
+    padding: 40px 0;
+}
+
+.sign-box {
+    text-align: left;
+    padding: 15px 73px;
+}
+
+.sign-box > h3 {
+    font-size: 28px;
+}
+
+.sign-box > .text-right > a {
+    font-size: 18px;
+}
+
+.sign-box > button {
+    margin: 45px 0;
+    height: 60px;
+    font-size: 28px;
+}
+
+@media (max-width: 767px) {
+    .main, .sign-box {
+        width: 100%;
+    }
+}
