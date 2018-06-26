@@ -39,14 +39,21 @@
     <main  class="container">
         <div class="main">   
             <h1>註冊</h1>   
-            <form action="#" class="sign-box" id="signInForm">
+            <form action="#" class="sign-box" id="signUpForm">
+                <div class="form-group">
+                    <label for="username" class="control-label">暱稱</label>
+                    <input class="form-control" type="text" id="username" autocomplete="off" required data-type="text">
+                    <span class="help-block has-error" id="usernameError"></span>
+                </div>
                 <div class="form-group">
                     <label for="email" class="control-label">電子郵件</label>
                     <input class="form-control" type="email" id="email" autocomplete="off" required data-type="email" placeholder="test@gmail.com">
+                    <span class="help-block has-error" id="emailError"></span>
                 </div>
                 <div class="form-group">
                     <label for="password">密碼</label>
                     <input class="form-control" type="password" id="password" autocomplete="off" required data-type="password">
+                    <span class="help-block has-error" id="passwordError"></span>
                 </div>
 
                 <button class="btn btn-default btn-block" id="btnSignUp">註冊</button>
