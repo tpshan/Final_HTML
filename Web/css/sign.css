@@ -17,12 +17,12 @@
     padding: 15px 73px;
 }
 
-.sign-box > h3 {
-    font-size: 28px;
+.form-group > label {
+    font-size: 24px;
 }
 
-.sign-box > .text-right > a {
-    font-size: 18px;
+.form-group a {
+    font-size: 16px;
 }
 
 .sign-box > button {

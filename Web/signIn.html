@@ -5,10 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>北科學餐Talk版</title>
-
+    <!-- js -->
+    <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/bootstrap.js"></script>
+    <script type="text/javascript" src="./js/script.js"></script>
     <link type="text/css" href="./css/bootstrap.css" rel="stylesheet">
     <link type="text/css" href="./css/style.css" rel="stylesheet">
-    <link type="text/css" href="./css/fontPage.css" rel="stylesheet">
+    <link type="text/css" href="./css/sign.css" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar navbar-default navbar-fixed-top" id="top-nav">
@@ -32,37 +36,25 @@
         </div>
     </nav>
     <div class="header-padding"></div>  <!-- 非套版, 要自己寫 -->
-    <main>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6 col-xs-12">
-                    <div class="card-box pull-left">
-                        <div class="card" id="sixthB4">
-                            <img src="./img/card-font.png" class="card-font" alt="">
-                            <img src="./img/card-back.png" class="card-back" alt="">
-                        </div>  <!-- card -->
-                    </div>  <!-- card-box -->
+    <main  class="container">
+        <div class="main">
+            <h1>登入</h1>
+            <form class="sign-box" id="signInForm">
+                <div class="form-group">
+                    <label for="username" class="control-label">帳號</label>
+                    <input type="text" class="form-control" id="username" name="username" autocomplete="off" required autofocus data-type="username" placeholder="帳號">
+                    <div class="text-right"><a href="./signUp.html">還沒有帳號？趕快去註冊！</a></div>
                 </div>
-                <div class="col-sm-6 col-xs-12">
-                    <div class="card-box pull-right">
-                        <div class="card" id="dormitory">
-                            <img src="./img/card-font.png" class="card-font" alt="">
-                            <div class="card-back">
-                                <h3>宿舍學餐</h3>
-                                <p>位在宿舍一樓，位在全家內。</p>
-                            </div>
-                        </div>
-                    </div>  <!-- card-box -->
+                <div class="form-group">
+                    <label for="password" class="control-label">密碼</label>
+                    <input type="password" class="form-control" id="password" name="password" autocomplete="off" required data-type="password">
+                    <span>密碼錯誤</span>
+                    <span class="pull-right"><a href="">忘記密碼</a></span>
                 </div>
-            </div>  <!-- row -->
-        </div>  <!-- container -->
-    </main>
-    <article class="slogan">
-        <div class="container">
-            <h1 class="text-center clear-S">和大家分享你呷飯的所在</h1>
-            <h1 class="text-center show-S">和大家分享<br>你呷飯的所在</h1>
+                <button class="btn btn-default btn-block" id="btnSignIn">登入</button>
+            </form>
         </div>
-    </article>
+    </main>
     <footer>
         <div>
             <ul class="web-icons">
@@ -75,9 +67,5 @@
             </ul>
         </div>
     </footer>
-    <!-- js -->
-    <script type="text/javascript" src="./js/jquery.min.js"></script>
-    <script type="text/javascript" src="./js/bootstrap.js"></script>
-    <script type="text/javascript" src="./js/script.js"></script>
 </body>
 </html>
