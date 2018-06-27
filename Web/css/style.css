@@ -10,7 +10,15 @@ ul {
 h1, h2, h3, h4, h5, h6, p, a, input, textarea, button {
     font-family: '微軟正黑體';
 }
-
+.headcolor{
+    background-color: #ffcf3d;
+}
+.headword h2{
+    color: #5a5a5a;
+}
+.headword h2:hover{
+    color: #232323;
+}
 /*================== nav ==================*/
 nav {
     height: 112px;
@@ -71,7 +79,7 @@ ul.navbar-right > li {
 /*================== end nav ==================*/
 /*================== footer ==================*/
 footer {
-    background: gray;
+    background: #3c3c3c;
     height: 145px;
     padding: 48px 0;
 }

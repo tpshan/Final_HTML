@@ -19,7 +19,7 @@ main > div.container {
     width: 86.363636363636363636363636363636%;
     padding: 48px;
     text-align: center;
-    background: black;
+    background: #797979;
 }
 
 .card:hover {
@@ -60,15 +60,15 @@ main > div.container {
 
 
 .slogan > div {
-    background: gray;
-    height: 180px;
-    padding: 60px 0;
-    margin-bottom: 150px;
+  
+    height: 100px;
+    padding: 10px 0;
+    margin-bottom: 120px;
 }
 
 @media (max-width: 767px) {
     .slogan> div {
-        height: 200px;
+        height: 120px;
     }
     
     h1 {
