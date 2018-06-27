@@ -28,9 +28,9 @@
             </div>  <!-- nav 固定區 = 必顯示區域 -->
             <div class="navbar-collapse collapse" id="sign">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><input type="button" value="登入" onclick="location.href='./signIn.html'" class="btn btn-default navbar-btn"></li>
-                    <li><input type="button" value="註冊" onclick="location.href='./signUp.html'" class="btn btn-default navbar-btn"></li>
-                    <li><input type="button" value="登出" class="btn btn-default navbar-btn" id="btnSignOut"></li>
+                    <li class="noUser"><input type="button" value="登入" onclick="location.href='./signIn.html'" class="btn btn-default navbar-btn"></li>
+                    <li class="noUser"><input type="button" value="註冊" onclick="location.href='./signUp.html'" class="btn btn-default navbar-btn"></li>
+                    <li class="hasUser"><input type="button" value="登出" class="btn btn-default navbar-btn" id="btnSignOut"></li>                    
                 </ul>   <!-- 固定於 nav 右側 -->
             </div>
         </div>
@@ -39,26 +39,25 @@
     <main  class="container">
         <div class="main">   
             <h1>註冊</h1>   
-            <form action="#" class="sign-box" id="signUpForm">
-                <div class="form-group">
+            <div class="sign-box" id="signUpForm">
+                <div class="form-group" id="usernameBox">
                     <label for="username" class="control-label">暱稱</label>
                     <input class="form-control" type="text" id="username" autocomplete="off" required data-type="text">
-                    <span class="help-block has-error" id="usernameError"></span>
+                    <span class="help-block" id="usernameError"></span>
                 </div>
-                <div class="form-group">
+                <div class="form-group" id="emailBox">
                     <label for="email" class="control-label">電子郵件</label>
                     <input class="form-control" type="email" id="email" autocomplete="off" required data-type="email" placeholder="test@gmail.com">
-                    <span class="help-block has-error" id="emailError"></span>
+                    <span class="help-block" id="emailError"></span>
                 </div>
-                <div class="form-group">
-                    <label for="password">密碼</label>
+                <div class="form-group" id="passwordBox">
+                    <label for="password" class="control-label">密碼</label>
                     <input class="form-control" type="password" id="password" autocomplete="off" required data-type="password">
-                    <span class="help-block has-error" id="passwordError"></span>
+                    <span class="help-block" id="passwordError"></span>
                 </div>
+                <button class="btn btn-default btn-block" id="btnSignUp">註冊</button>                
 
-                <button class="btn btn-default btn-block" id="btnSignUp">註冊</button>
-
-            </form>
+            </div>
             <div id="sign-info">No one login...</div>
         </div>
     </main>

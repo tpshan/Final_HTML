@@ -1,4 +1,7 @@
 $(document).ready(function(){
+  $('#menuButton').click(function(){
+
+  });
   // Initialize Firebase
   var config = {
     apiKey: "AIzaSyBtg-lOL3UQylv990zx6di3Gs54qfpXtM4",
@@ -9,6 +12,7 @@ $(document).ready(function(){
     messagingSenderId: "406296476548"
   };
   firebase.initializeApp(config);
+
   const $email = $('#email');
   const $password = $('#password');  
 
@@ -19,6 +23,7 @@ $(document).ready(function(){
   const $signInfo = $('#sign-info');
 
   const auth = firebase.auth();
+  const dbRef = firebase.database().ref();
 
   $.fn.showUserData = function(user) {
     user.providerData.forEach(function (profile) {
@@ -30,74 +35,85 @@ $(document).ready(function(){
     });
   }
 
-  $.fn.setUsername = function(user){
-    const username = $('#username').val();
-    //const photoURL = $('#photoURL').val();
-    const setDataAction = user.updateProfile({
-      displayName: username
-      //photoURL: photoURL
-    });
-    $.fn.showUserData(user);
-  }
-
-
   // SignUp
   $btnSignUp.click(function(){
-    console.log('-1');
     const username = $('#username').val();
     const email = $email.val();
     const password = $password.val();
     // Sign Up Error
     if(username==='') {
+      $('#signUpForm > #usernameBox').addClass('has-error');
       $('#usernameError').html('請填寫暱稱');
       return;
+    } else {
+      $('#signUpForm > #usernameBox').removeClass('has-error');
+      $('#usernameError').html('');
     }
     if(email==='') {
+      $('#signUpForm > #emailBox').addClass('has-error');
       $('#emailError').html('請填寫電子郵件位置');
       return;
+    } else {
+      $('#signUpForm > #emailBox').removeClass('has-error');
+      $('#emailError').html('');
     }
     if(password==='') {
+      $('#signUpForm > #passwordBox').addClass('has-error');
       $('#passwordError').html('請填寫密碼');
       return;
-    }
-    else if(password.length < 8) {
+    } else if(password.length < 8) {
+      $('#signUpForm > #passwordBox').addClass('has-error');
       $('#passwordError').html('密碼至少要八位數');
       return;
+    } else {
+      $('#signUpForm > #passwordBox').removeClass('has-error');
+      $('#passwordError').html('');
     }
     // signUp
-    console.log('0');
     const creatAction = auth.createUserWithEmailAndPassword(email, password);
-
-    console.log('1');
     creatAction.catch(function(error) {
-      console.log(error.message);
+      alert("註冊失敗！\n" + error.message);
       $signInfo.html(error.message);
     });
-    console.log('2');
     creatAction.then(function(){
       const user = auth.currentUser;
-      $.fn.setUsername(user);
+      console.log('sign up = '+user.displayName);
+      const username = $('#username').val();
+      const setDataAction = user.updateProfile({displayName: username});
+      firebase.database().ref('users/' + user.uid).set({email: user.email});
       alert("註冊成功！");
       window.location.href = "./index.html";
     });
-    console.log('3');
-    $.fn.showUserData(auth.currentUser);
   });
 
   // SignIn
   $btnSignIn.click(function(){
-    console.log('btnSignIn');
     const email = $email.val();
     const password = $password.val();
+    if(email==='') {
+      $('#signInForm > #emailBox').addClass('has-error');
+      $('#emailError').html('請填寫電子郵件位置');
+      return;
+    } else {
+      $('#signInForm > #emailBox').removeClass('has-error');
+      $('#emailError').html('');
+    }
+    if(password==='') {
+      $('#signInForm > #passwordBox').addClass('has-error');
+      $('#passwordError').html('請填寫密碼');
+      return;
+    } else {
+      $('#signInForm > #passwordBox').removeClass('has-error');
+      $('#passwordError').html('');
+    }
     // signIn
     const loginAction = auth.signInWithEmailAndPassword(email, password);
-    console.log('qq');
     loginAction.catch(function(error){
-      console.log(error.message);
+      alert("登入失敗！\n" + error.message);
       $signInfo.html(error.message);
     });
     loginAction.then(function(){
-      alert("登入成功！");
+      alert(auth.currentUser.email + " 歡迎登入！");
       window.location.href = "./index.html";
     });
   });
@@ -105,12 +121,15 @@ $(document).ready(function(){
   // Listening Login User
   auth.onAuthStateChanged(function(user){
     if(user) {
-      console.log(user);
+      $('.noUser').hide();
+      $('.hasUser').show();
       $signInfo.html(user.email+" is login...");
       $.fn.showUserData(user);
-      
-    } else {
-      console.log("listening not logged in");
+    }
+    else {
+      $('.noUser').show();
+      $('.hasUser').hide();
+      $signInfo.html('lintening no one');
     }
   });
 
