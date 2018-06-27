@@ -51,6 +51,7 @@ main > div.container {
 
 .card-text > h3 {
     font-size: 48px;
+    margin-bottom: 30px;
 }
 
 .card-text > p {

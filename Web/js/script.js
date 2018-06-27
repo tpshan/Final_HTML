@@ -1,6 +1,7 @@
 $(document).ready(function(){
   $('#menuButton').click(function(){
-
+    //$('#navbarSpace').toggleClass('show');
+    $('#navbarSpace').slideToggle(400);
   });
   // Initialize Firebase
   var config = {
@@ -20,9 +21,8 @@ $(document).ready(function(){
   const $btnSignIn = $('#btnSignIn');
   const $btnSignOut = $('#btnSignOut');
 
-  const $signInfo = $('#sign-info');
-
   const auth = firebase.auth();
+  const storageRef = firebase.storage().ref();
   const dbRef = firebase.database().ref();
 
   $.fn.showUserData = function(user) {
@@ -72,8 +72,7 @@ $(document).ready(function(){
     // signUp
     const creatAction = auth.createUserWithEmailAndPassword(email, password);
     creatAction.catch(function(error) {
-      alert("註冊失敗！\n" + error.message);
-      $signInfo.html(error.message);
+      alert("註冊失敗！\n" + error.message);      
     });
     creatAction.then(function(){
       const user = auth.currentUser;
@@ -109,8 +108,7 @@ $(document).ready(function(){
     // signIn
     const loginAction = auth.signInWithEmailAndPassword(email, password);
     loginAction.catch(function(error){
-      alert("登入失敗！\n" + error.message);
-      $signInfo.html(error.message);
+      alert("登入失敗！\n" + error.message);      
     });
     loginAction.then(function(){
       alert(auth.currentUser.email + " 歡迎登入！");
@@ -123,19 +121,16 @@ $(document).ready(function(){
     if(user) {
       $('.noUser').hide();
       $('.hasUser').show();
-      $signInfo.html(user.email+" is login...");
       $.fn.showUserData(user);
     }
     else {
       $('.noUser').show();
       $('.hasUser').hide();
-      $signInfo.html('lintening no one');
     }
   });
 
   $btnSignOut.click(function(){
     auth.signOut();
-    $signInfo.html('No one login...');
     alert("登出成功！");
   });
 });

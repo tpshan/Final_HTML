@@ -1,0 +1,25 @@
+.main {
+    background: silver;
+    width: 80%;
+    height: auto;
+    margin: 60px auto;
+    margin-bottom: 150px;
+    text-align: center;
+}
+
+.post-box {
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 60px;
+    text-align: left;
+}
+
+.post-box > button {
+    margin: 45px 0;
+    height: 60px;
+    font-size: 28px;
+}
+
+#textBox > textarea {
+    height: 500px;
+}

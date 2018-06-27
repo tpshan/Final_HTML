@@ -5,16 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>北科學餐Talk版</title>
+    <!-- js -->
+    <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/bootstrap.js"></script>
 
     <link type="text/css" href="./css/bootstrap.css" rel="stylesheet">
     <link type="text/css" href="./css/style.css" rel="stylesheet">
-    <link type="text/css" href="./css/fontPage.css" rel="stylesheet">
+    <link type="text/css" href="./css/post.css" rel="stylesheet">
+
+    <script type="text/javascript" src="./js/script.js"></script>
 </head>
 <body>
     <nav class="navbar navbar-default navbar-fixed-top" id="top-nav">
         <div class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle clear-L" data-toggle="collapse" data-target="#sign" aria-expanded="false">
+                <button type="button" class="navbar-toggle clear-L" data-toggle="collapse" data-target="#sign" aria-expanded="false" id="menuButton">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -24,23 +30,29 @@
             </div>  <!-- nav 固定區 = 必顯示區域 -->
             <div class="navbar-collapse collapse" id="sign">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><input type="button" value="登入" onclick="location.href='./signIn.html'" class="btn btn-default navbar-btn"></li>
-                    <li><input type="button" value="註冊" onclick="location.href='./signUp.html'" class="btn btn-default navbar-btn"></li>
-                    <li><input type="button" value="登出" class="btn btn-default navbar-btn" id="btnSignOut"></li>
+                    <li class="noUser"><input type="button" value="登入" onclick="location.href='./signIn.html'" class="btn btn-default navbar-btn"></li>
+                    <li class="noUser"><input type="button" value="註冊" onclick="location.href='./signUp.html'" class="btn btn-default navbar-btn"></li>
+                    <li class="hasUser"><input type="button" value="登出" class="btn btn-default navbar-btn" id="btnSignOut"></li>                    
                 </ul>   <!-- 固定於 nav 右側 -->
             </div>
         </div>
     </nav>
     <div class="header-padding"></div>  <!-- 非套版, 要自己寫 -->
-    <main>
+    <div id="navbarSpace"></div>
+    <main  class="container">
         <div class="main">
-            <h1>想說什麼</h1>
-            <form action="#" class="sign-box" id="signInForm">
-                <div class="form-group">
-                    <input type="" class="form-control" autocomplete="off">
+            <h1>發表文章</h1>
+            <div class="post-box" id="newPostForm">
+                <div class="form-group" id="titleBox">
+                    <label for="title" class="control-label">標題</label>
+                    <input type="text" class="form-control" id="title" autocomplete="off" required autofocus data-type="text" placeholder="標題">
                 </div>
-                <button class="btn btn-default btn-block" id="btnSignIn"><a href="./article_b4">發文</a></button>
-            </form>
+                <div class="form-group" id="textBox">
+                    <label for="text" class="control-label">內容</label>
+                    <textarea type="text" class="form-control" id="newPostText" autocomplete="off" required autofocus data-type="text" placeholder="請輸入內文"></textarea>
+                </div>
+                <button class="btn btn-default btn-block" id="btnNewPost">發表文章</button>
+            </div>
         </div>
     </main>
     <footer>
@@ -55,9 +67,5 @@
             </ul>
         </div>
     </footer>
-    <!-- js -->
-    <script type="text/javascript" src="./js/jquery.min.js"></script>
-    <script type="text/javascript" src="./js/bootstrap.js"></script>
-    <script type="text/javascript" src="./js/script.js"></script>
 </body>
 </html>

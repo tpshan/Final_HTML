@@ -1,24 +1,6 @@
-.main {
-    background: silver;
-    width: 603px;
-    height: 605px;
-    margin: 60px auto;
-    margin-bottom: 150px;
-    text-align: center;
-}
-
-.main > h1 {
-    font-size: 60px;
-    padding: 40px 0;
-}
-
 .sign-box {
     text-align: left;
     padding: 15px 73px;
-}
-
-.form-group > label {
-    font-size: 24px;
 }
 
 .form-group a {

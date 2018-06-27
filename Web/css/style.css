@@ -1,8 +1,3 @@
-#navbarSpace {
-    width: 100%;
-    background: pink;
-}
-
 h1, h2, ul, a {
     margin: 0;
     padding: 0;
@@ -12,7 +7,7 @@ ul {
     list-style: none;
 }
 
-h1, h2, h3, h4, h5, h6, p, a {
+h1, h2, h3, h4, h5, h6, p, a, input, textarea, button {
     font-family: '微軟正黑體';
 }
 
@@ -113,6 +108,10 @@ footer > div {
 .clear-S, .clear-M, .clear-L {
     display: block;
 }
+#navbarSpace {
+    width: 100%;    
+    display: none;
+}
 
 @media (min-width: 1280px) {
     .show-L {
@@ -121,8 +120,32 @@ footer > div {
     .clear-L {
         display: none;
     }
+    #navbarSpace {
+        height: 0;
+    }
+}
+/*=============內容=========*/
+.main {
+    background: silver;
+    width: 603px;
+    height: 605px;
+    margin: 60px auto;
+    margin-bottom: 150px;
+    text-align: center;
 }
 
+.main > h1 {
+    font-size: 60px;
+    padding: 40px 0;
+}
+
+.form-group > label {
+    font-size: 24px;
+}
+.form-group > input, .form-group > textarea {
+    font-size: 16px;
+}
+/*=============內容 End=========*/
 @media (min-width: 768px) and  (max-width: 1279px){
     .show-M {
         display: block;
@@ -133,6 +156,9 @@ footer > div {
     .navbar-collapse {
         position: fixed;
         top: 111px;
+    }
+    #navbarSpace {
+        height: 100px;
     }
 }
 
@@ -155,6 +181,9 @@ footer > div {
     }
     .clear-S {
         display: none;
+    }
+    #navbarSpace {
+        height: 150px;
     }
 }
 /*================== end footer ==================*/
