@@ -5,14 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>北科學餐Talk版</title>
-    <!-- js -->
-    <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
-    <script type="text/javascript" src="./js/jquery.min.js"></script>
-    <script type="text/javascript" src="./js/bootstrap.js"></script>
-    <script type="text/javascript" src="./js/script.js"></script>
+
     <link type="text/css" href="./css/bootstrap.css" rel="stylesheet">
     <link type="text/css" href="./css/style.css" rel="stylesheet">
-    <link type="text/css" href="./css/sign.css" rel="stylesheet">
+    <link type="text/css" href="./css/fontPage.css" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar navbar-default navbar-fixed-top" id="top-nav">
@@ -28,33 +24,17 @@
             </div>  <!-- nav 固定區 = 必顯示區域 -->
             <div class="navbar-collapse collapse" id="sign">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="noUser"><input type="button" value="登入" onclick="location.href='./signIn.html'" class="btn btn-default navbar-btn"></li>
-                    <li class="noUser"><input type="button" value="註冊" onclick="location.href='./signUp.html'" class="btn btn-default navbar-btn"></li>
-                    <li class="hasUser"><input type="button" value="登出" class="btn btn-default navbar-btn" id="btnSignOut"></li>                    
+                    <li><input type="button" value="登入" onclick="location.href='./signIn.html'" class="btn btn-default navbar-btn"></li>
+                    <li><input type="button" value="註冊" onclick="location.href='./signUp.html'" class="btn btn-default navbar-btn"></li>
+                    <li><input type="button" value="登出" class="btn btn-default navbar-btn" id="btnSignOut"></li>
                 </ul>   <!-- 固定於 nav 右側 -->
             </div>
         </div>
     </nav>
     <div class="header-padding"></div>  <!-- 非套版, 要自己寫 -->
-    <main  class="container">
-        <div class="main">
-            <h1>登入</h1>
-            <div class="sign-box" id="signInForm">
-                <div class="form-group" id="emailBox">
-                    <label for="email" class="control-label">帳號</label>
-                    <input type="email" class="form-control" id="email" autocomplete="off" required autofocus data-type="email" placeholder="電子郵件位置">
-                    <span class="help-block pull-left" id="emailError"></span>
-                    <span class="text-right pull-right"><a href="./signUp.html">還沒有帳號？趕快去註冊！</a></span>
-                </div>
-                <div class="form-group clear" id="passwordBox">
-                    <label for="password" class="control-label">密碼</label>
-                    <input type="password" class="form-control" id="password" autocomplete="off" required data-type="password">
-                    <span class="help-block has-error" id="passwordError"></span>
-                    <span class="pull-right"><a href="">忘記密碼</a></span>
-                </div>
-                <button class="btn btn-default btn-block" id="btnSignIn">登入</button>
-            </div>
-            <div id="sign-info">No one login...</div>
+    <main>
+        <div>
+            
         </div>
     </main>
     <footer>
@@ -69,5 +49,9 @@
             </ul>
         </div>
     </footer>
+    <!-- js -->
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/bootstrap.js"></script>
+    <script type="text/javascript" src="./js/script.js"></script>
 </body>
 </html>
