@@ -70,18 +70,19 @@ $(document).ready(function(){
       $('#passwordError').html('');
     }
     // signUp
-    const creatAction = auth.createUserWithEmailAndPassword(email, password);
-    creatAction.catch(function(error) {
-      alert("註冊失敗！\n" + error.message);      
-    });
-    creatAction.then(function(){
+    auth.createUserWithEmailAndPassword(email, password).then(function() {
       const user = auth.currentUser;
-      console.log('sign up = '+user.displayName);
       const username = $('#username').val();
-      const setDataAction = user.updateProfile({displayName: username});
-      firebase.database().ref('users/' + user.uid).set({email: user.email});
+      user.updateProfile({
+        displayName: username
+      });
+      firebase.database().ref('users/' + user.uid).set({
+        email: user.email
+      });
       alert("註冊成功！");
       window.location.href = "./index.html";
+    }).catch(function(error) {
+      alert("註冊失敗！\n" + error.message);
     });
   });
 
@@ -106,19 +107,18 @@ $(document).ready(function(){
       $('#passwordError').html('');
     }
     // signIn
-    const loginAction = auth.signInWithEmailAndPassword(email, password);
-    loginAction.catch(function(error){
-      alert("登入失敗！\n" + error.message);      
-    });
-    loginAction.then(function(){
+    loginAction = auth.signInWithEmailAndPassword(email, password).then(function() {
       alert(auth.currentUser.email + " 歡迎登入！");
       window.location.href = "./index.html";
+    }).catch(function(error) {
+      alert("登入失敗！\n" + error.message); 
     });
   });
 
   // Listening Login User
   auth.onAuthStateChanged(function(user){
     if(user) {
+      $('#userMessage').html(user.displayName + ' 你好！');
       $('.noUser').hide();
       $('.hasUser').show();
       $.fn.showUserData(user);

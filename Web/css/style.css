@@ -1,3 +1,6 @@
+body {
+    font-size: 16px;
+}
 h1, h2, ul, a {
     margin: 0;
     padding: 0;
@@ -7,7 +10,7 @@ ul {
     list-style: none;
 }
 
-h1, h2, h3, h4, h5, h6, p, a, input, textarea, button {
+h1, h2, h3, h4, h5, h6, p, a, input, textarea, button, .breadcrumb {
     font-family: '微軟正黑體';
 }
 .headcolor{
@@ -73,6 +76,7 @@ ul.navbar-right > li {
 }
 
 .header-padding {
+    width: 100%;
     height: 112px;
 }
 
@@ -152,6 +156,10 @@ footer > div {
 }
 .form-group > input, .form-group > textarea {
     font-size: 16px;
+}
+.breadcrumb {
+    font-size: 16px;
+    margin: 20px 0;
 }
 /*=============內容 End=========*/
 @media (min-width: 768px) and  (max-width: 1279px){

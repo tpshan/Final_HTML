@@ -1,0 +1,36 @@
+#sortList {
+    width: 250px;
+    height: 600px;
+    background: whitesmoke;
+    padding: 20px;  
+}
+
+#sortList span {
+    font-size: 28px;
+}
+
+#sortList > div {
+    margin-bottom: 30px;
+}
+#sortList > div > ul {
+    display: none;
+}
+
+#sortList ul > a > li{
+    margin-left: 32px;
+    font-size: 20px;
+    width: 150px;
+    height: 50px;    
+    padding: 10px;
+}
+#sortList ul > a:hover > li {
+    background: yellow;
+}
+
+.afterGlyphicon {
+    vertical-align: 10%;
+}
+
+.page {
+    padding: 20px;
+}

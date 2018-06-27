@@ -16,7 +16,7 @@
     <script type="text/javascript" src="./js/script.js"></script>
 </head>
 <body>
-    <nav class="navbar navbar-default navbar-fixed-top" id="top-nav">
+    <nav class="navbar navbar-default navbar-fixed-top headcolor" id="top-nav">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle clear-L" data-toggle="collapse" data-target="#sign" aria-expanded="false" id="menuButton">
@@ -25,12 +25,13 @@
                     <span class="icon-bar"></span>
                 </button>   <!-- 漢堡選單 L-Size 收合, 小於 L-Size 顯示 -->
                 <a class="navbar-brand clear-S" href="./index.html"><img src="./img/logo.png" alt="logo"></a>
-                <a class="navbar-brand" href="./index.html"><h2>北科學餐Talk版</h2></a>
+                <a class="navbar-brand headword" href="./index.html"><h2>北科學餐Talk版</h2></a>
             </div>  <!-- nav 固定區 = 必顯示區域 -->
             <div class="navbar-collapse collapse" id="sign">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="noUser"><input type="button" value="登入" onclick="location.href='./signIn.html'" class="btn btn-default navbar-btn"></li>
                     <li class="noUser"><input type="button" value="註冊" onclick="location.href='./signUp.html'" class="btn btn-default navbar-btn"></li>
+                    <li class="hasUser"><span id="userMessage"></span></li>                    
                     <li class="hasUser"><input type="button" value="登出" class="btn btn-default navbar-btn" id="btnSignOut"></li>                    
                 </ul>   <!-- 固定於 nav 右側 -->
             </div>
@@ -38,6 +39,9 @@
     </nav>
     <div class="header-padding"></div>  <!-- 非套版, 要自己寫 -->
     <div id="navbarSpace"></div>
+
+
+    
     <footer>
         <div>
             <ul class="web-icons">
