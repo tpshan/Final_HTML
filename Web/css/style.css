@@ -1,3 +1,8 @@
+#navbarSpace {
+    width: 100%;
+    background: pink;
+}
+
 h1, h2, ul, a {
     margin: 0;
     padding: 0;
@@ -161,3 +166,10 @@ footer > div {
     }
 }
 /*================== end footer ==================*/
+li.hasUser, li.noUser, #navbarSpace {
+    display: none;
+}
+
+.clear {
+    clear: both;
+}
