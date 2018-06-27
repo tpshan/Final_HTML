@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>北科學餐Talk版</title>
-  <!-- js -->
-  <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
-  <script type="text/javascript" src="./js/jquery.min.js"></script>
-  <script type="text/javascript" src="./js/bootstrap.js"></script>
-  <script type="text/javascript" src="./js/script.js"></script>
-  <!-- css -->
-  <link type="text/css" href="./css/bootstrap.css" rel="stylesheet">
-  <link type="text/css" href="./css/style.css" rel="stylesheet">
-  <link type="text/css" href="./css/sign.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>北科學餐Talk版</title>
+
+    <link type="text/css" href="./css/bootstrap.css" rel="stylesheet">
+    <link type="text/css" href="./css/style.css" rel="stylesheet">
+    <link type="text/css" href="./css/fontPage.css" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar navbar-default navbar-fixed-top" id="top-nav">
@@ -35,31 +32,8 @@
         </div>
     </nav>
     <div class="header-padding"></div>  <!-- 非套版, 要自己寫 -->
-    <main  class="container">
-        <div class="main">   
-            <h1>註冊</h1>
-            <form action="#" class="sign-box" id="signUpForm">
-                <div class="form-group">
-                    <label for="username" class="control-label">暱稱</label>
-                    <input class="form-control" type="text" id="username" autocomplete="off" required data-type="text">
-                    <span class="help-block has-error" id="usernameError"></span>
-                </div>
-                <div class="form-group">
-                    <label for="email" class="control-label">電子郵件</label>
-                    <input class="form-control" type="email" id="email" autocomplete="off" required data-type="email" placeholder="test@gmail.com">
-                    <span class="help-block has-error" id="emailError"></span>
-                </div>
-                <div class="form-group">
-                    <label for="password">密碼</label>
-                    <input class="form-control" type="password" id="password" autocomplete="off" required data-type="password">
-                    <span class="help-block has-error" id="passwordError"></span>
-                </div>
+    <main>
 
-                <button class="btn btn-default btn-block" id="btnSignUp">註冊</button>
-
-            </form>
-            <div id="sign-info">No one login...</div>
-        </div>
     </main>
     <footer>
         <div>
@@ -73,5 +47,9 @@
             </ul>
         </div>
     </footer>
+    <!-- js -->
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/bootstrap.js"></script>
+    <script type="text/javascript" src="./js/script.js"></script>
 </body>
 </html>
