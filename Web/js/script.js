@@ -73,8 +73,12 @@ $(document).ready(function(){
     auth.createUserWithEmailAndPassword(email, password).then(function() {
       const user = auth.currentUser;
       const username = $('#username').val();      
-      auth.currentUser.updateProfile({
+      user.updateProfile({
         displayName: username
+      }).then(function() {
+        console.log('修改成功');
+      }).catch(function(error) {
+        console.log('修改失敗');
       });
       firebase.database().ref('users/' + user.uid).set({
         email: user.email,
