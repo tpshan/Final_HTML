@@ -8,9 +8,6 @@ $(document).ready(function(){
         $('#btnDorm > .glyphicon-plus-sign').toggleClass('hide');
         $('#btnDorm > .glyphicon-minus-sign').toggleClass('hide');
         $('#dormList').slideToggle();
-    });
-    $('#btnLove').click(function(){
-        $(this).toggleClass('glyphicon-heart-empty');
-        $(this).toggleClass('glyphicon-heart');
-    });
+    }); 
+    
 });

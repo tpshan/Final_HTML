@@ -72,12 +72,13 @@ $(document).ready(function(){
     // signUp
     auth.createUserWithEmailAndPassword(email, password).then(function() {
       const user = auth.currentUser;
-      const username = $('#username').val();
-      user.updateProfile({
+      const username = $('#username').val();      
+      auth.currentUser.updateProfile({
         displayName: username
       });
       firebase.database().ref('users/' + user.uid).set({
-        email: user.email
+        email: user.email,
+        name: username
       });
       alert("註冊成功！");
       window.location.href = "./index.html";
@@ -122,6 +123,17 @@ $(document).ready(function(){
       $('.noUser').hide();
       $('.hasUser').show();
       $.fn.showUserData(user);
+
+      $('#btnLove').click(function(){
+        var n = Number($('#shopLoveNumber').text());
+        if($('#btnLove').hasClass('glyphicon-heart-empty')===true) {            
+            $('#shopLoveNumber').html(n+1);            
+        }else {
+            $('#shopLoveNumber').html(n-1);    
+        }
+        $(this).toggleClass('glyphicon-heart-empty');
+        $(this).toggleClass('glyphicon-heart');
+      });
     }
     else {
       $('.noUser').show();
