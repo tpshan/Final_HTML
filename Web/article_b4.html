@@ -12,8 +12,10 @@
 
     <link type="text/css" href="./css/bootstrap.css" rel="stylesheet">
     <link type="text/css" href="./css/style.css" rel="stylesheet">
+    <link type="text/css" href="./css/article.css" rel="stylesheet">
 
     <script type="text/javascript" src="./js/script.js"></script>
+    <script type="text/javascript" src="./js/article.js"></script>
 </head>
 <body>
     <nav class="navbar navbar-default navbar-fixed-top headcolor" id="top-nav">
@@ -39,20 +41,45 @@
     </nav>
     <div class="header-padding"></div>  <!-- 非套版, 要自己寫 -->
     <div id="navbarSpace"></div>
-    <div class="container">
-        <ul class="breadcrumb">
-          <li class="breadcrumb-item"><a href="./index.html">首頁</a></li>
-          <li class="breadcrumb-item active">六教學餐</li>
-        </ul>
-    </div>
-    <main class="container">
-        <div class="row">
-            <div class="col-sm-3">
-
+    <main class="container-fluid">
+    
+        <div class="pull-left" id="sortList">                                 
+            <div>
+                <a href="#"><span class="glyphicon" id="btnSixth">
+                    <span class="glyphicon-plus-sign"></span>
+                    <span class="glyphicon-minus-sign hide"></span>
+                </span></a>
+                <span class="afterGlyphicon">六教</span>                
+                <ul id="sixthList">
+                    <a href=""><li>天津蔥抓餅</li></a>
+                    <a href=""><li>素還真</li></a>
+                    <a href=""><li>金盃美兒美</li></a>
+                    <a href=""><li>自助餐</li></a>
+                </ul>
             </div>
-            <div class="col-sm-9 col-xs-12">
-
+            <div>
+                <a href="#"><span class="glyphicon" id="btnDorm">
+                    <span class="glyphicon-plus-sign"></span>
+                    <span class="glyphicon-minus-sign hide"></span>
+                </span></a>
+                <span class="afterGlyphicon">宿舍</span>
+                <ul id="dormList">
+                    <a href=""><li>巧果工仿</li></a>
+                    <a href=""><li>咖哩森林</li></a>
+                    <a href=""><li>橙廚</li></a>
+                    <a href=""><li>兩片吐司</li></a>
+                    <a href=""><li>三顧茅廬</li></a>
+                </ul>
             </div>
+        </div>
+        <div class="page pull-left">
+            <ul class="breadcrumb">
+                <li class="breadcrumb-item"><a href="./index.html">首頁</a></li>
+                <li class="breadcrumb-item active">六教學餐</li>
+            </ul>
+            <h1></h1>
+            <ul id="postList">
+            </ul>
         </div>
     </main>
 

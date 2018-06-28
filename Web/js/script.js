@@ -1,6 +1,6 @@
 $(document).ready(function(){
   $('#menuButton').click(function(){
-    //$('#navbarSpace').toggleClass('show');
+    $(this).toggleClass('open');
     $('#navbarSpace').slideToggle(400);
   });
   // Initialize Firebase

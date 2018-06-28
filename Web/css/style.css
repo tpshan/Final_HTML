@@ -10,9 +10,14 @@ ul {
     list-style: none;
 }
 
-h1, h2, h3, h4, h5, h6, p, a, input, textarea, button, .breadcrumb {
+body, h1, h2, h3, h4, h5, h6, p, a, input, textarea, button, .breadcrumb {
     font-family: '微軟正黑體';
 }
+
+h1 {
+    font-size: 60px;
+}
+
 .headcolor{
     background-color: #ffcf3d;
 }
@@ -23,6 +28,47 @@ h1, h2, h3, h4, h5, h6, p, a, input, textarea, button, .breadcrumb {
     color: #232323;
 }
 /*================== nav ==================*/
+#menuButton {
+    background: whitesmoke;
+}
+#menuButton > span {
+    position: absolute;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+#menuButton span:nth-child(1) {
+    top: 16px;
+    transform-origin: left center;
+}
+  
+#menuButton span:nth-child(2) {
+  top: 20px;
+  transform-origin: left center;
+}
+
+#menuButton span:nth-child(3) {
+  top: 28px;
+  transform-origin: left center;
+}
+
+#menuButton.open span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 16px;
+  left: 14px;
+}
+
+#menuButton.open span:nth-child(2) {
+  width: 0%;
+  opacity: 0;
+}
+  
+#menuButton.open span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 28px;
+  left: 14px;
+}
+
+
 nav {
     height: 112px;
 }
@@ -158,8 +204,10 @@ footer > div {
     font-size: 16px;
 }
 .breadcrumb {
-    font-size: 16px;
+    font-size: 20px;
     margin: 20px 0;
+    height: 45px;
+    padding:10px;    
 }
 /*=============內容 End=========*/
 @media (min-width: 768px) and  (max-width: 1279px){
