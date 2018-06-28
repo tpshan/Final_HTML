@@ -123,7 +123,7 @@ $(document).ready(function(){
   // Listening Login User
   auth.onAuthStateChanged(function(user){
     if(user) {
-      $('#userMessage').html(user.displayName + ' 你好！');
+      $('#userMessage').html(user.email + ' 你好！');
       $('.noUser').hide();
       $('.hasUser').show();
       $.fn.showUserData(user);
