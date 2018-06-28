@@ -19,7 +19,7 @@ h1 {
 }
 
 .headcolor{
-    background-color: #ffcf3d;
+    background-color: #FFDD55;
 }
 .headword h2{
     color: #5a5a5a;
@@ -184,7 +184,7 @@ footer > div {
 }
 /*=============內容=========*/
 .main {
-    background: silver;
+    background: #ffc8b4;
     width: 603px;
     height: 605px;
     margin: 60px auto;

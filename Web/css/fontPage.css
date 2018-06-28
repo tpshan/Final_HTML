@@ -12,10 +12,10 @@ main > div.container {
 }
 
 .card-box {
-    width: 86.363636363636363636363636363636%;
+    width: 86.3636%;
     padding: 48px;
     text-align: center;
-    background: #797979;
+    background: #FFC8B4;
 }
 
 .card:hover {
@@ -35,7 +35,7 @@ main > div.container {
     position: absolute;
     top: 0;
     right: 0;
-    color: white;
+    color: #2f2f2f;
 }
 
 .card-text {
@@ -64,7 +64,7 @@ main > div.container {
 
 @media (max-width: 767px) {
     .slogan> div {
-        height: 120px;
+        height: 150px;
     }
     
     h1 {
