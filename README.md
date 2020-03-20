@@ -1,6 +1,6 @@
 # Final_HTML
 HW for Web Programming   
-兩人一組 實作 Midterm_HTML (https://github.com/tpshan/Midterm_HTML)   
+兩人一組 實作 Midterm_HTML (https://github.com/tpshan/Midterm_HTML)    
 功能不是非常齊全的期末專案   
 https://tpshan.github.io/Final_HTML/Web/index.html
 
